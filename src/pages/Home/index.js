@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
+import Shoes from '../../components/Shoes'
+
 export default function Home() {
   return(
     <View style={styles.container}>
@@ -31,9 +33,12 @@ export default function Home() {
         <View style={styles.line} />
 
         <ScrollView>
-          <Text style={styles.text}>LANÇAMENTO</Text>
+          <Text style={styles.text}>Lançamentos</Text>
 
-          <View style={{ flexDirection: 'row', justifyContent: "space-between" }}></View>
+          <View style={{ flexDirection: 'row', justifyContent: "space-around" }}>
+            <Shoes />
+            <Shoes />
+          </View>
         </ScrollView>
 
     </View>
