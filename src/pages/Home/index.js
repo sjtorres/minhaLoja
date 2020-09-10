@@ -1,10 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import Shoes from '../../components/Shoes'
 
 export default function Home() {
+  const navigation = useNavigation()
+
   return(
     <View style={styles.container}>
       <View style={styles.header}>
@@ -36,12 +39,14 @@ export default function Home() {
           <Text style={styles.text}>Lançamentos</Text>
 
           <View style={{ flexDirection: 'row', justifyContent: "space-around" }}>
-            <Shoes 
+            <Shoes
+              onClick={()=> navigation.navigate('Detail')}  
               img={require('../../assets/1.png')}
               cost="R$140,90">
               Nike Air Max Dia
             </Shoes>
             <Shoes 
+              onClick={()=> navigation.navigate('Detail')} 
               img={require('../../assets/2.png')}
               cost="R$280,90">
               Nike Downshifter 10
@@ -50,11 +55,13 @@ export default function Home() {
           
           <View style={{ flexDirection: 'row', justifyContent: "space-around" }}>
             <Shoes 
+              onClick={()=> alert('VOCÊ CLICOU')}  
               img={require('../../assets/3.png')}
               cost="R$560,90">
               Nike Squidward Tentacles
             </Shoes>
             <Shoes 
+              onClick={()=> alert('VOCÊ CLICOU')} 
               img={require('../../assets/4.png')}
               cost="R$220,90">
               Nike Epic React Flyknit 2
@@ -63,11 +70,13 @@ export default function Home() {
 
           <View style={{ flexDirection: 'row', justifyContent: "space-around" }}>
             <Shoes 
+              onClick={()=> navigation.navigate('Detail')} 
               img={require('../../assets/5.png')}
               cost="R$120,90">
               Nike Joyride Run
             </Shoes>
             <Shoes 
+              onClick={()=> navigation.navigate('Detail')} 
               img={require('../../assets/6.png')}
               cost="R$920,90">
               Nike Sandro Torres
