@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native'
 
 import Dot from '../../components/Dot'
+import SizeButton from '../../components/SizeButton'
 
 export default function Detail({ navigation }) {
 
@@ -32,6 +33,15 @@ export default function Detail({ navigation }) {
           <Dot color="#000" />
         </View>
 
+        <View style={{ flexDirection: 'row', width: '100%' }}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <SizeButton bgColor="#17181A" color="#FFF">40</SizeButton>
+            <SizeButton>37</SizeButton>
+            <SizeButton>39</SizeButton>
+            <SizeButton>42</SizeButton>
+          </ScrollView>
+        </View>
+
 
       </View>
     </ScrollView>
@@ -52,6 +62,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: '2%'
   },
   dotsContainer: {
-
+    flexDirection: 'row',
+    marginVertical: '7%',
   }
 })
