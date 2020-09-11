@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native'
 
+import Dot from '../../components/Dot'
+
 export default function Detail({ navigation }) {
 
   navigation.setOptions({
@@ -24,7 +26,10 @@ export default function Detail({ navigation }) {
         </View>
 
         <View style={styles.dotsContainer}>
-        
+          <Dot color="#2379F4" />
+          <Dot color="#FB6E53" />
+          <Dot color="#DDD" />
+          <Dot color="#000" />
         </View>
 
 
@@ -47,6 +52,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: '2%'
   },
   dotsContainer: {
-    
+
   }
 })
